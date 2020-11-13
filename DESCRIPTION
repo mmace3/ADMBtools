@@ -1,0 +1,15 @@
+Package: ADMBtools
+Type: Package
+Title: Helpful tools for using AD Model Builder
+Version: 0.0.1
+Author: Marvin Mace III
+Maintainer: me <marvin.mace.iii@gmail.com>
+Description: ADMBtools contains useful functions when working with ADMB. 
+    As of now there is only one function that helps to create .dat files for use with ADMB.
+License: 
+Encoding: UTF-8
+LazyData: true
+Imports:
+Suggests:
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
