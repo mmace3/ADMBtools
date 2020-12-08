@@ -45,7 +45,7 @@ create_dat_file <- function(dat_list, dat_name, meta, d = getwd(), f = "ADMB")
     } else
       {
 
-        write(dat_list[[i]], file = file_name, append = TRUE)
+        write(dat_list[[i]], file = file_name, append = TRUE, ncolumns = length(dat_list[[i]]))
 
       }
 
