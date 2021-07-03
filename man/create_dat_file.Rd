@@ -4,18 +4,39 @@
 \alias{create_dat_file}
 \title{Create .dat file for use in ADMB model}
 \usage{
-create_dat_file(dat_list, dat_name, d = getwd(), f = "ADMB")
+create_dat_file(
+  dat_list,
+  dat_name,
+  title = "ADMB .dat file",
+  author = "Author",
+  d = getwd(),
+  f = "ADMB"
+)
 }
 \arguments{
-\item{dat_list}{list with data that will be written to .dat file}
+\item{dat_list}{list with data that will be written to .dat file. Each element
+must have mode = numeric.}
 
-\item{d}{directory where .dat file will be placed. Default is the working directory.}
+\item{dat_name}{list of character vectors. Must be same length as dat_list. Each
+vector will be a comment that corresponds to the dat_list comment
+at the same position. For example, dat_name[[1]] will be a comment
+that will correspond to dat_list[[1]].}
 
-\item{f}{file name for .dat file. Default is ADMB.dat}
+\item{title}{character vector. Title that will appear at top of .dat file as comment.
+Default is "ADMB .dat file"}
+
+\item{author}{character vector. Name of author that will appear at top of .dat file.
+Default is "Author".}
+
+\item{d}{directory where .dat file will be placed. Default is the working directory.
+A directory that does not exist results in an error.}
+
+\item{f}{file name for .dat file. Default is ADMB.dat. Only can contain letters,
+numbers, or _.}
 }
 \description{
 \code{create_dat_file} takes a list of data \code{dat_list},
 }
 \details{
-\code{dat_list} must be a \code{list}, if not an error is thrown.
+
 }
